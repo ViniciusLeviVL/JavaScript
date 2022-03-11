@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: lightslategray;
+            font: normal 0.7em Arial;
+        }
+        input {
+            border-radius: 2px;
+        }
+        input#invel {
+            width: 50px;
+        }
+        div#res {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação de multa !</h1>
+    Digite sua velocidade: <input type="number" name="invel" id="invel"> Km/h
+    <input type="button" value="Verificar" onclick="verify()">
+    <div id="res"></div>
+    <script>
+        var vel = document.getElementById('invel')
+        function verify() {
+            if (vel.value > 60) {
+                document.querySelector('div#res').innerHTML = 'Você foi <strong>MULTADO</strong> por excesso de velocidade !'
+            } else {
+                document.querySelector('div#res').innerHTML = 'Velocidade permitida !<br> Dirija sempre usando cinto de segurança !'
+            }
+        }
+    </script>
+</body>
+</html>

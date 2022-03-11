@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="padraoboxcenter.css">
+    <style>
+        input#ntab {
+            width: 80px;
+            font-size: 0.8em;
+            font-weight: bolder;
+        }
+        input#gtab {
+            font-size: 0.8em;
+        }
+        ul {
+            margin: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <main>
+        <p>
+            Número: 
+            <input type="number" name="ntab" id="ntab"> 
+            <input type="button" value="Gerar Tabuada" id="gtab" onclick="gerartabuada()">
+        </p>
+        <ul  id="ultab" type="none">
+            
+        </ul>
+        <script src="Tabuada.js"></script>
+    </main>
+    <p id="footer">&copy;Curso em Vídeo</p>
+</body>
+</html>

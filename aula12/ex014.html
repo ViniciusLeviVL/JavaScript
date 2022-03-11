@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        input#atualizar {
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data atual</h1>
+    <span id="iddia">Dia</span> |
+    <span id="idhora">Hora</span>:<span id="idmin">Min</span>:<span id="idsec">Sec</span> |
+     <input type="button" value="Atualizar" id="atualizar" onclick="atualizar()">
+    <script>
+        var data = new Date()
+        var diasem = data.getDay()
+        var hora = data.getHours()
+        var min = data.getMinutes()
+        var sec = data.getSeconds()
+        function atualizar() {
+            switch (diasem) { //Condição do dia da semana
+                case 0:
+                    var dia = ('Domingo')
+                    break;
+                case 1:
+                    var dia = ('Segunda')
+                    break;
+                case 2:
+                    var dia = ('Terça')
+                    break;
+                case 3: 
+                    var dia = ('Quarta')
+                    break;
+                case 4:
+                    var dia = ('Quinta')
+                    break;
+                case 5:
+                    var dia = ('Sexta')
+                    break;
+                case 6:
+                    var dia = ('Sábado')
+                    break;
+                default:
+                    var dia = ('[ERROR]')
+                    break;
+                
+            }
+            document.getElementById('iddia').innerHTML = dia // Envia o Dia
+            document.getElementById('idhora').innerHTML = hora
+            document.getElementById('idmin').innerHTML = min
+            document.getElementById('idsec').innerHTML = sec
+        }
+    </script>
+</body>
+</html>

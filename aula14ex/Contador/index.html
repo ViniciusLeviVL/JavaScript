@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="padraoboxcenter.css">
+</head>
+<style>
+    main {
+        text-align: left;
+        padding: 20px;
+        max-width: 500px;
+    }
+    input#inco {
+        margin-left: 40px;
+        font-size: 1em;
+        padding: 2px;
+    }
+</style>
+<body>
+    <h1>Contador</h1>
+    <main>
+        <p>Início: 
+            <input type="number" name="inin" id="inin">
+        </p>
+        <p>Fim: 
+            <input type="number" name="infi" id="infi">
+            <input type="button" value="Contar" id="inco" onclick="contar()">
+        </p>
+        <p>Passo:
+            <input type="number" name="inpa" id="inpa">
+        </p>
+        <p id="res"></p>
+        <script src="contador.js"></script>
+    </main>
+    <p id="footer">&copy; Curso em Vídeo</p>
+</body>
+</html>
